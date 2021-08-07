@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Alexey Bodnarchuk - CV</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="icon" href="img/2.png" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <nav>
+          <a href="#scills">My scills</a>
+          <a href="#code-examples">Code examples</a>
+          <a href="#projects">Projects</a>
+          <a href="#edu">Education</a>
+        </nav>
+      </header>
+      <section class="info" id="info">
+        <div class="info-text">
+          <h1 class="info-heading">Alexey Bodnarchuk</h1>
+          <em class="special">Frontend-dev</em>
+          <p class="more">
+            Hello! My name's Alexey Bodnarchuk. I know math, physics, and
+            programming on an amazing level. I learn English, and now my english
+            level is C1/C1+ <br />
+            I learn very quickly and easily. I'm going to never give up. I'm
+            ready for deadlines. <br />
+            Everything that I told is good, isn't that? But... I'm only 10 years
+            old. That's incredible, but that's true!
+          </p>
+        </div>
+        <img src="img/me.png" class="info-img" alt="me" />
+      </section>
+      <section class="scills" id="scills">
+        <h2 class="scills-heading">My scills</h2>
+        <ul class="first-line">
+          <li class="scill">
+            <img src="img/scills/python.png" alt="python" /> Python
+          </li>
+          <li class="scill">
+            <img src="img/scills/html.png" alt="html" />
+            HTML
+          </li>
+          <li class="scill">
+            <img src="img/scills/css.png" alt="css" />
+            CSS
+          </li>
+          <li class="scill">
+            <img src="img/scills/grid.png" alt="grid" /> CSS Grid
+          </li>
+          <li class="scill">
+            <img src="img/scills/flex.png" alt="flex" /> CSS Flexbox
+          </li>
+          <li class="scill">
+            <img src="img/scills/less.png" alt="less" /> LESS Preprocessor
+          </li>
+          <li class="scill">
+            <img src="img/scills/js.png" alt="js" /> JavaScript
+          </li>
+          <li class="scill">
+            <img src="img/scills/c++.png" alt="c++" /> I also learn C++
+          </li>
+        </ul>
+
+        <ul class="second-line">
+          <li class="scill">
+            <img src="img/scills/git.png" alt="git" />
+          </li>
+          <li class="scill">
+            <img src="img/scills/gh.png" alt="github" />
+          </li>
+          <li class="scill">
+            <img src="img/scills/corel_draw.png" alt="corel draw" /> Corel Draw
+          </li>
+          <li class="scill">
+            <img src="img/scills/ps.png" alt="photoshop" /> Adobe Photoshop
+          </li>
+          <li class="scill eng-scill">
+            English level -<br />
+            C1 (Advanced)
+          </li>
+        </ul>
+      </section>
+      <section class="code-examples" id="code-examples">
+        <h2 class="code-examples-heading">Code Examples</h2>
+        <h3 class="code-examples-heading-2">From random tasks</h3>
+        <div class="code-examples-wrapper">
+          <pre class="code-example code-example-1">
+function Event() {
+  this.handlers = [];
+}
+
+Event.prototype.subscribe = function(f) {
+  if(!(f in this.handlers)) {
+    this.handlers.push(f);
+  }
+}
+
+Event.prototype.unsubscribe = function(f) {
+  for(let i = 0; i &lt; this.handlers.length; i++) {
+    if (this.handlers[i] == f) {
+      this.handlers.splice(i, 1);
+    }
+  }
+}
+
+Event.prototype.emit = function(...args) {
+  for(let i = 0; i &lt; this.handlers.length; i++) {
+    this.handlers[i](...args);
+  }
+}
+</pre
+          >
+
+          <pre class="code-example code-example-2">
+let findMedianSortedArrays = function(nums1, nums2) {
+  let mergedArray = nums1;
+
+  nums2.forEach((elem) => {
+    mergedArray.push(elem);
+  });
+
+  mergedArray = mergedArray.sort((a, b) => {
+      if(a &gt; b) {
+          return 1;
+      } else {
+          return -1;
+      }
+  });
+    
+  if (mergedArray.length % 2 == 1) {
+    return mergedArray[(mergedArray.length - 1) / 2];
+  } else {
+    return (mergedArray[mergedArray.length  / 2] +
+    mergedArray[mergedArray.length  / 2 - 1]) / 2;
+  }
+};
+  </pre
+          >
+        </div>
+      </section>
+      <section class="projects" id="projects">
+        <h2 class="projects-heading">Projects</h2>
+
+        <div class="projects-wrapper">
+          <div class="project project-1">
+            <h4>Wildlife landing page</h4>
+            <img src="img/projects/wildlife.png" alt="wildlife landing" />
+            <a
+              href="https://rolling-scopes-school.github.io/alexe1900-JSFE2021Q1/wildlife/"
+              target="_blank"
+            >
+              https://rolling-scopes-school.github.io/alexe1900-JSFE2021Q1/wildlife/
+            </a>
+          </div>
+          <div class="project project-2">
+            <h4>Moving blocks web-game</h4>
+            <img
+              src="img/projects/moving_blocks.png"
+              alt="moving blocks web-game"
+            />
+            <a
+              href="https://alexe1900.github.io/mypages/moving-blocks-game/"
+              target="_blank"
+            >
+              https://alexe1900.github.io/mypages/moving-blocks-game/
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="education" id="edu">
+        <h2 class="education-heading">Education</h2>
+        <p class="education-info">
+          March 2020 - Sept 2020: <br />
+          GeekBrains courses and intensives <br />
+          Feb 2021 - May 2021: <br />
+          JavaScript/Front-end 2021Q1 (RS school) <br />
+          July 2021 - ?: <br />
+          JavaScript/Front-end 2021Q3 (RS school) <br />
+          March 2020 - ?: <br />
+          Education on Internet (most of all - Youtube)
+        </p>
+      </section>
+    </div>
+    <footer>
+      <nav class="footer-nav">
+        <a href="#info">About me</a>
+        <a href="#scills">My scills</a>
+        <a href="#code-examples">Code examples</a>
+        <a href="#projects">Projects</a>
+        <a href="#edu">Education</a>
+      </nav>
+      <address>
+        <ul>
+          <li>
+            <a href="mailto:alexe1900@mail.ru">alexe1900@mail.ru</a>
+          </li>
+          <li>
+            <a href="mailto:alexejbodnarchuk@gmail.com">
+              alexejbodnarchuk@gmail.com
+            </a>
+          </li>
+          <li>
+            <a href="tel:+38095719-84-07">095 719-84-07</a>
+          </li>
+        </ul>
+      </address>
+      <div class="social-icons">
+        <a href="https://t.me/alexej_bodnarchuk">
+          <img src="img/icons/tg.ico" alt="tg" />
+        </a>
+        <a href="viber://chat?number=%2B375447779105">
+          <img src="img/icons/viber.ico" alt="viber" />
+        </a>
+        <a href="https://www.youtube.com/watch?v=0A-RuklizE4" target="_blank">
+          <img src="img/icons/youtube.ico" alt="youtube" />
+        </a>
+        <a href="https://github.com/Alexe1900" target="_blank">
+          <img src="img/icons/github.ico" id="gh-link-img" alt="github" />
+        </a>
+      </div>
+      <span class="year">2021</span>
+      <a href="https://rs.school/js/" target="_blank">
+        <img src="img/rsschool.svg" alt="" height="35" />
+      </a>
+    </footer>
+  </body>
+</html>
